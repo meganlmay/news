@@ -9,10 +9,10 @@ before { puts "Parameters: #{params}" }
 # enter your Dark Sky API key here
 ForecastIO.api_key = "YOUR-API-KEY"
 
-get "/" do
+get "/location" do
   # show a view that asks for the location
+    @lat = rand(-90.0..90.0)
+    @long = rand(-180.0..180.0)
+    @lat_long = "#{@lat},#{@long}"
 end
 
-get "/news" do
-  # do everything else
-end
