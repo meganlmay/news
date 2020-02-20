@@ -24,10 +24,19 @@
 
     <div class="container mt-5">
       <h1>Geocoding</h1>
-      <form action="/map">
-      <input type="text" name="q">
-      <button type="submit">Go There</submit>
+    <p>
+    <a href="/" class="btn btn-primary">Map</a>
       <form>
+      <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtovsQvkIUWlNqtYwXY87gEd4ZSmJEhMw
+          &q=<%= @lat_long %>&zoom=6" allowfullscreen>
+      </iframe>
+      <p>
+    <a href="/" class="btn btn-primary">Search</a>
+    <p>
     </div>
 
     <!-- Optional JavaScript -->
