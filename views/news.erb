@@ -21,14 +21,26 @@
     <title>Geocoding</title>
   </head>
   <body>
-
     <div class="container mt-5">
-      <h1>Geocoding</h1>
-      <form action="/map">
-      <input type="text" name="q">
-      <button type="submit">Go There</submit>
-      <form>
+      <h1>Megan Tribune</h1>
+      <div class="row">
+       <div class="col-sm-2">
+      <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://darksky.net/forecast/@lat_long/us12/en" allowfullscreen>
+         </iframe>
+        <% for day in @forecast %>
+        A high temperature of <%= "#{day["temperatureHigh"]}" =%> and <%= "#{day["summary"]}" =%>
+        "In #{location}, it is currently #{current_temperature} and #{conditions}"
+        <% end %>
+      </div>
+      <p>
+        <a href="/" class="btn btn-primary">Go Somewhere Else!</a>
+      </p>
     </div>
+     
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
