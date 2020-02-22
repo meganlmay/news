@@ -25,12 +25,6 @@
       <h1>Megan Tribune</h1>
       <div class="row">
        <div class="col-sm-2">
-      <iframe
-        width="600"
-        height="450"
-        frameborder="0" style="border:0"
-        src="https://darksky.net/forecast/@lat_long/us12/en" allowfullscreen>
-         </iframe>
         <% for day in @forecast %>
         A high temperature of <%= "#{day["temperatureHigh"]}" =%> and <%= "#{day["summary"]}" =%>
         "In #{location}, it is currently #{current_temperature} and #{conditions}"
