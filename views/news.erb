@@ -21,21 +21,20 @@
     <title>Geocoding</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <h1>Weather & News</h1>
-      <div class="row">
-      <p>
-      <% for day in @forecast %>
-      A high temperature of <%= "#{day["temperatureHigh"]}" and "#{day["summary"]}" %>.
-      "In (#{lat}, #{long}), it is currently <%= #{current_temperature} and #{conditions} ."
-      
-      <% for headlines in news %>
-      
 
-      <% end %>
+  <h1> "Where in the world is Carmen San Diego?" </h1>
 
-      </p>
-      </div>
+<h1><%= @location %></h1>
+    <div class="row">
+    <% for day in @forecast %>
+        A high temperature of <%= day["temperatureHigh"] %> and <%= day["summary"] %>. 
+      
+    <% end>
+
+    
+    </div>
+
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

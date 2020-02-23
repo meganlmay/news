@@ -16,6 +16,7 @@ end
 
 get "/news" do
     results = Geocoder.search(params["q"])
+    @location = params["q"]
   # News API
     url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0007a9bfcdcf4108bd2f99b97bd7b655"
     news = HTTParty.get(url).parsed_response.to_hash
@@ -27,6 +28,6 @@ get "/news" do
     @current_temperature = forecast["currently"]["temperature"]
     @conditions = forecast["currently"]["summary"]
     @forecast = forecast ["daily"]["data"]
-    @paper = news ["articles"]
+    @paper = news ["articles"] 
     view "news"
 end
