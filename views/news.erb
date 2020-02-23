@@ -24,6 +24,13 @@
     <div class="container mt-5">
       <h1>Megan Tribune!</h1>
       <div class="row">
+      <p>
+      
+      <% for day in @forecast %>
+        A high temperature of <%= "#{day["temperatureHigh"]}" %> and <%= "#{day["summary"]}" %>
+        In <% "#{lat_long}" %>, it is currently <% "#{current_temperature}" %> and <% "#{conditions}" %>.
+        <% end %>
+      </p>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
