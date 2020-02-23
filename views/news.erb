@@ -22,20 +22,9 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Megan Tribune</h1>
+      <h1>Megan Tribune!</h1>
       <div class="row">
-       <div class="col-sm-2">
-        <% for day in @forecast %>
-        A high temperature of <%= "#{day["temperatureHigh"]}" =%> and <%= "#{day["summary"]}" %>
-        "In #{lat_long}, it is currently #{current_temperature} and #{conditions}"
-        <% end %>
       </div>
-      <p>
-        <a href="/" class="btn btn-primary">Go Somewhere Else!</a>
-      </p>
-    </div>
-     
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
