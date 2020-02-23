@@ -37,3 +37,12 @@
     color: white;
     text-shadow: 4px 4px 4px black;
     text-align: right;
+  }
+
+.ask {
+    background-color: palevioletred;
+}
+.news {
+    background-color: palevioletred;
+    color: white
+}
