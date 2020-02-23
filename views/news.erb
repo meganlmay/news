@@ -26,8 +26,8 @@
       <div class="row">
        <div class="col-sm-2">
         <% for day in @forecast %>
-        A high temperature of <%= "#{day["temperatureHigh"]}" =%> and <%= "#{day["summary"]}" =%>
-        "In #{location}, it is currently #{current_temperature} and #{conditions}"
+        A high temperature of <%= "#{day["temperatureHigh"]}" =%> and <%= "#{day["summary"]}" %>
+        "In #{lat_long}, it is currently #{current_temperature} and #{conditions}"
         <% end %>
       </div>
       <p>
