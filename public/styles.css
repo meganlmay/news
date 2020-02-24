@@ -3,13 +3,14 @@
     font-family: 'Signika', sans-serif;
   }
   /* Except we're using more specific rules to override the headlines */
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, {
     font-family: 'Dancing Script', cursive;
   }
   /* And the "logo" */
   .navbar-brand {
     font-family: 'Dancing Script', cursive;
     font-size: 26px;
+    color: black; 
   }
   .navbar-brand img {
     width: 30px;
@@ -22,24 +23,25 @@
   /* Navbar background color */
   .navbar {
     background-color: white;
+    color: black; 
   }
   
   /* Jumbotron background and font styles */
   .jumbotron {
     /* Background */
     background-attachment: fixed;
-    background-image: url(image1.JPG);
+    background-image: url(https://i.ytimg.com/vi/o6wMCkY7kjA/maxresdefault.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   
     /* Fonts */
     /* The text-shadow helps the white text stand out better on a darker background */
-    color: white;
-    text-shadow: 4px 4px 4px black;
+    color:black;
+    text-shadow: 4px 4px 4px white;
     text-align: right;
   }
 .newspage {
-    background-color: palevioletred;
+    background-color: lightblue;
     color: white
 }
 

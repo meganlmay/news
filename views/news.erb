@@ -24,13 +24,14 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">"Where in the world is Carmen San Diego?"</h1>
-    <p class="lead">It is currently <%= @current_temperature %> degrees and <%= @current_conditions %> in <%= @location %>.</p>
-  </div>
+    <h1 class="display-4">Where in the world is Carmen San Diego?</h1>
+    <p class="lead">In <%= @location %> where it is currently <%= @current_temperature %> degrees and <%= @current_conditions %>.</p>
+    </div>
 </div>
 
 <p>
 <div class="container mt-5">
+<h1 class="display-4">Daily Weather</h1> 
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -38,6 +39,7 @@
       <th scope="col">Temperature</th>
       <th scope="col">Wind</th>
       <th scope="col">Conditions</th>
+      <th scope="col">Pic</th>
     </tr>
   </thead>
   <tbody>
@@ -77,6 +79,11 @@
 </table>
 </div>
 </p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Daily News</h1>
+    </div>
+</div>
 
 <div class="container mt-5">
     <% for article in @news["articles"] %>
