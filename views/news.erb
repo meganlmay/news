@@ -31,7 +31,7 @@
 
 <p>
 <div class="container mt-5">
-<h1 class="display-4">Daily Weather</h1> 
+<h3 class="display-4">Daily Weather</h3> 
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -39,7 +39,7 @@
       <th scope="col">Temperature</th>
       <th scope="col">Wind</th>
       <th scope="col">Conditions</th>
-      <th scope="col">Pic</th>
+      <th scope="col">Forecast</th>
     </tr>
   </thead>
   <tbody>
@@ -48,6 +48,7 @@
       <td><%=@daily_temperature[0]%> degrees</td>
       <td><%=@daily_wind[0]%>mph</td>
       <td><%=@daily_conditions[0]%></td>
+      <td><img src="https://darksky.net/images/weather-icons/<%= @day_forecast["icon"] %>.png"[0]</td>
     </tr>
     <tr>
       <th scope="row">In Two Days</th>

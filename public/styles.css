@@ -6,6 +6,12 @@
   h1, h2, {
     font-family: 'Dancing Script', cursive;
   }
+h3 {
+    color:black;
+    text-shadow: 4px 4px 4px white;
+    text-align: right;
+  }
+
   /* And the "logo" */
   .navbar-brand {
     font-family: 'Dancing Script', cursive;
@@ -46,6 +52,6 @@
 }
 
 .home {
-    background-color: white;
-    color: palevioletred; 
+    background-color: white; 
+    color: palevioletred;
 }
