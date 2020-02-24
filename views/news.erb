@@ -20,21 +20,70 @@
 
     <title>Geocoding</title>
   </head>
-  <body>
+  <body class="newspage"> 
 
-  <h1> "Where in the world is Carmen San Diego?" </h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">"Where in the world is Carmen San Diego?"</h1>
+    <p class="lead">It is currently <%= @current_temperature %> degrees and <%= @current_conditions %> in <%= @location %>.</p>
+  </div>
+</div>
 
-<h1><%= @location %></h1>
-    <div class="row">
-    <% for day in @forecast %>
-        A high temperature of <%= day["temperatureHigh"] %> and <%= day["summary"] %>. 
-      
-    <% end>
+<p>
+<div class="container mt-5">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Day</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Wind</th>
+      <th scope="col">Conditions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Tomorrow</th>
+      <td><%=@daily_temperature[0]%> degrees</td>
+      <td><%=@daily_wind[0]%>mph</td>
+      <td><%=@daily_conditions[0]%></td>
+    </tr>
+    <tr>
+      <th scope="row">In Two Days</th>
+      <td><%=@daily_temperature[1]%> degrees</td>
+      <td><%=@daily_wind[1]%>mph</td>
+      <td><%=@daily_conditions[1]%></td>
+    </tr>
+    <tr>
+      <th scope="row">In Three Days</th>
+      <td><%=@daily_temperature[2]%> degrees</td>
+      <td><%=@daily_wind[2]%>mph</td>
+      <td><%=@daily_conditions[2]%></td>
+    </tr>
 
-    
-    </div>
+    <tr>
+      <th scope="row">In Four Days</th>
+      <td><%=@daily_temperature[3]%> degrees</td>
+      <td><%=@daily_wind[3]%>mph</td>
+      <td><%=@daily_conditions[3]%></td>
+    </tr>
 
-   
+    <tr>
+      <th scope="row">In Five Days</th>
+      <td><%=@daily_temperature[4]%> degrees</td>
+      <td><%=@daily_wind[4]%>mph</td>
+      <td><%=@daily_conditions[4]%></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</p>
+
+<div class="container mt-5">
+    <% for article in @news["articles"] %>
+    <p><a href= "<%= article["url"] %>"> <%= article["title"] %></a></p>
+    <% end %>
+</div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
